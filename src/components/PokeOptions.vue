@@ -1,5 +1,13 @@
 <template>
-<p>options</p>
+<h4>Selecciona una opción</h4>
+<div class="options-container">
+    <ul>
+        <li>Op1</li>
+        <li>Op1</li>
+        <li>Op1</li>
+        <li>Op1</li>
+    </ul>
+</div>
 </template>
 
 <script>
@@ -9,6 +17,27 @@ export default
 }
 </script>
 
-<style>
+<style scoped>
+.options-container {
+    display: flex;
+    justify-content: center;
+}
 
+ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+li {
+    border: 1px solid rgba(203, 201, 201, 0.5);
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px 5px 5px 5px;
+    border-radius: 8px;
+    width: 250px;
+    background-color: white;
+}
+li:hover{
+    background-color: aliceblue;
+}
 </style>
