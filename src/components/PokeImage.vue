@@ -1,15 +1,41 @@
 <template>
 <h2>¿Quién es ese Pokemon?</h2>
 <div class="img-container">
-    <img class="img-hint" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Pokemon">
-    <img class="img-show fade-in" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Pokemon">
+    <img class="img-hint" :src="imgSrc" alt="Pokemon" height="250">
+    <img v-show="isVisible" class="img-show fade-in" :src="imgSrc" alt="Pokemon" height="250">
 </div>
 </template>
 
 <script>
 export default
 {
-
+    props:
+    {
+        pokeId:
+        {
+            type: Number,
+            required: true,
+        },
+        isVisible:
+        {
+            type: Boolean,
+            required: true,
+            default: false,
+        }
+    },
+    data()
+    {
+        return {}
+    },
+    computed:
+    {
+        imgSrc()
+        {
+            return "https://raw.githubusercontent.com/PokeAPI/" +
+                "sprites/master/sprites/pokemon/other/dream-world/" +
+                `${this.pokeId}.svg`;
+        }
+    }
 }
 </script>
 

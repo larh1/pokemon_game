@@ -1,6 +1,6 @@
 <template>
 <div>
-    <poke-image />
+    <poke-image :pokeId="id" :isVisible="true" />
     <poke-options />
 </div>
 </template>
@@ -14,6 +14,12 @@ export default
     {
         "poke-image": PokeImage,
         "poke-options": PokeOptions,
+    },
+    data()
+    {
+        return {
+            id: 1,
+        }
     }
 }
 </script>
