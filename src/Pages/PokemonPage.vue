@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import getOptions from "@/helpers/options";
 import PokeImage from "@/components/PokeImage.vue";
 import PokeOptions from "@/components/PokeOptions.vue";
 export default
@@ -20,6 +21,10 @@ export default
         return {
             id: 1,
         }
+    },
+    mounted()
+    {
+        console.error(getOptions().then(console.table));
     }
 }
 </script>
