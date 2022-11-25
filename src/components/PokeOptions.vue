@@ -2,10 +2,7 @@
 <h4>Selecciona una opción</h4>
 <div class="options-container">
     <ul>
-        <li>Op1</li>
-        <li>Op1</li>
-        <li>Op1</li>
-        <li>Op1</li>
+        <li :key=poke.id v-for="poke in options ">{{poke.name}}</li>
     </ul>
 </div>
 </template>
@@ -13,7 +10,14 @@
 <script>
 export default
 {
-
+    props:
+    {
+        options:
+        {
+            type: Array,
+            required: true,
+        }
+    }
 }
 </script>
 
@@ -37,7 +41,8 @@ li {
     width: 250px;
     background-color: white;
 }
-li:hover{
+
+li:hover {
     background-color: aliceblue;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 <div>
     <poke-image :pokeId="id" :isVisible="true" />
-    <poke-options />
+    <poke-options :options="poke_data" />
 </div>
 </template>
 
@@ -20,11 +20,19 @@ export default
     {
         return {
             id: 1,
+            poke_data: [],
+        }
+    },
+    methods:
+    {
+        async GetData()
+        {
+            this.poke_data = await getOptions();
         }
     },
     mounted()
     {
-        console.error(getOptions().then(console.table));
+        this.GetData();
     }
 }
 </script>
