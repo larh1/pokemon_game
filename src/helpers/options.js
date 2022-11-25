@@ -35,10 +35,10 @@ const getNames = async ([id1,id2,id3,id4] = []) =>
     // Desestructurar
     let [p1,p2,p3,p4] = await Promise.all(proms);
     return [
-        {id: p1.data.id,name: p1.data.name},
-        {id: p2.data.id,name: p2.data.name},
-        {id: p3.data.id,name: p3.data.name},
-        {id: p4.data.id,name: p4.data.name},
+        {id: p1.data.id,name: p1.data.name.toUpperCase()},
+        {id: p2.data.id,name: p2.data.name.toUpperCase()},
+        {id: p3.data.id,name: p3.data.name.toUpperCase()},
+        {id: p4.data.id,name: p4.data.name.toUpperCase()},
     ];
 }
 

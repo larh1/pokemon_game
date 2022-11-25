@@ -2,16 +2,23 @@
 <div>
     <div v-if="pokemon.id">
         <poke-image :pokeId="pokemon.id" :isVisible="showPoke" />
-        <poke-options :options="poke_data" @poke-selection="CheckSelected" />
+        <poke-options :options="poke_data" @poke-selection="CheckSelected" ref="poke_options" />
 
         <div v-if="showAnswer" class="fade-in">
             <h3>{{message}}</h3>
-            <button class="btn-restart" @click="Restart">Reiniciar</button>
+            <button class="btn btn-primary" @click="Restart">
+                <i class="fa-solid fa-rotate-left fa-lg"></i>
+            </button>
             <br>
             <br>
         </div>
     </div>
-    <h2 v-else>Cargando...</h2>
+    <div v-else class="text-center">
+        <div class="spinner-grow text-info" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+
+    </div>
 </div>
 </template>
 
@@ -59,10 +66,12 @@ export default
         {
             this.showAnswer = true;
             this.showPoke = true;
-            if (pokeId == this.pokemon.id)
-                this.message = `!Correcto!, es ${this.pokemon.name}`;
+            let correct = pokeId == this.pokemon.id;
+            if (correct)
+                this.message = `¡Correcto, es ${this.pokemon.name}!`;
             else
                 this.message = `Oops!, era ${this.pokemon.name}`;
+            this.$refs.poke_options.CheckWinner(correct);
         },
 
         /**
@@ -76,6 +85,7 @@ export default
             this.showPoke = false;
             this.showAnswer = false;
             this.GetData();
+            this.$refs.poke_options.Reset();
         }
     },
     mounted()
@@ -84,7 +94,3 @@ export default
     }
 }
 </script>
-
-<style>
-
-</style>

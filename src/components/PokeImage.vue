@@ -1,5 +1,5 @@
 <template>
-<h2>¿Quién es ese Pokemon?</h2>
+<h2 class="fw-bold">¿Quién es ese Pokemon?</h2>
 <div class="img-container">
     <img class="img-hint" :src="imgSrc" alt="Pokemon" height="200">
     <img v-show="isVisible" class="img-show fade-in" :src="imgSrc" alt="Pokemon" height="200">

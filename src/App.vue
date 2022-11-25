@@ -25,7 +25,8 @@ export default
     color: #2c3e50;
     margin-top: 60px;
 }
-body{
-    background-color: #efefef;
+
+body {
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
 }
 </style>
