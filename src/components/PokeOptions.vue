@@ -2,7 +2,8 @@
 <h4>Selecciona una opción</h4>
 <div class="options-container">
     <ul>
-        <li :key=poke.id v-for="poke in options ">{{poke.name}}</li>
+        <li :key=poke.id v-for="poke in options"
+        @click="$emit('poke-selection',poke.id)">{{poke.name}}</li>
     </ul>
 </div>
 </template>
@@ -10,6 +11,7 @@
 <script>
 export default
 {
+    emits: ["poke-selection"], // Definir emits
     props:
     {
         options:

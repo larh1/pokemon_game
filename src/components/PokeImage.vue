@@ -1,8 +1,8 @@
 <template>
 <h2>¿Quién es ese Pokemon?</h2>
 <div class="img-container">
-    <img class="img-hint" :src="imgSrc" alt="Pokemon" height="250">
-    <img v-show="isVisible" class="img-show fade-in" :src="imgSrc" alt="Pokemon" height="250">
+    <img class="img-hint" :src="imgSrc" alt="Pokemon" height="200">
+    <img v-show="isVisible" class="img-show fade-in" :src="imgSrc" alt="Pokemon" height="200">
 </div>
 </template>
 
@@ -41,7 +41,7 @@ export default
 
 <style scoped>
 .img-container {
-    height: 250px;
+    height: 200px;
 }
 
 .img-hint {
