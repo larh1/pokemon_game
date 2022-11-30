@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokeImage Debe coincidir con el spanshot 1`] = `
+<h2 class="fw-bold">¿Quién es ese Pokemon?</h2>
+<div class="img-container"><img class="img-show fade-in" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Pokemon" height="200"></div>
+`;
