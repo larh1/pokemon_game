@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pokeOptions Debe coincidir con el snapshot 1`] = `
+<h5 class="mt-2">Selecciona una opción</h5>
+<div class="options-container">
+  <ul class="asd">
+    <li>BULBASAUR</li>
+    <li>IVYSAUR</li>
+    <li>VENUSAUR</li>
+    <li>CHARMANDER</li>
+  </ul>
+</div>
+`;
