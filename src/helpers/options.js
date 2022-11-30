@@ -1,7 +1,7 @@
 import pokeApi from "@/api/pokeapi";
 
 // Crear array con las opciones
-const getData = () =>
+export const getData = () =>
 {
     let data = []; // Todas las opciones
     for (let i = 0; i < 650; i++)
@@ -24,7 +24,7 @@ const getOptions = async () =>
 
 }
 
-const getNames = async ([id1,id2,id3,id4] = []) =>
+export const getNames = async ([id1,id2,id3,id4] = []) =>
 {
     const proms = [
         pokeApi.get(`/${ id1 }`),

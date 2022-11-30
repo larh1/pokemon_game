@@ -7,6 +7,6 @@ describe("api",() =>
      */
     test("Axios debe estar configurado correctamente",() =>
     {
-        expect(pokeApi.defaults.baseURL).toBe("https://pokeapi.co/api/v2/pokemon1")
+        expect(pokeApi.defaults.baseURL).toBe("https://pokeapi.co/api/v2/pokemon")
     });
 })
