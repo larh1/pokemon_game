@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokemonPage Debe coincidir con el snapshot cuando cargó la info 1`] = `
+<div>
+  <div>
+    <poke-image-stub pokeid="1" isvisible="false"></poke-image-stub>
+    <poke-options-stub options=""></poke-options-stub>
+    <!--v-if-->
+  </div>
+</div>
+`;
