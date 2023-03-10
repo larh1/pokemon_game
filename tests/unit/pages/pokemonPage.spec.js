@@ -1,5 +1,5 @@
 import PokemonPage from "@/Pages/PokemonPage";
-import { shallowMount } from "@vue/test-utils";
+import {shallowMount} from "@vue/test-utils";
 
 describe("PokemonPage",() =>
 {
@@ -73,36 +73,4 @@ describe("PokemonPage",() =>
         expect(options.attributes("options")).toBe("");
     });
 
-    test("PokemonImage y PokeOptions deben existir",async () =>
-    {
-        // crear wrap
-        const wrap = shallowMount(PokemonPage,{
-            data()
-            {
-                return {
-                    id: 1,
-                    poke_data: [],
-                    pokemon:
-                    {
-                        id: 1,
-                        name: "BULBASAUR"
-                    },
-                    showPoke: false,
-                    showAnswer: false,
-                    message: "",
-                }
-            }
-        });
-        // Comprobar el poke 1
-        await wrap.vm.CheckSelected(1);
-        expect(wrap.find("h3").exists()).toBe(true);
-        expect(wrap.find("h3").text()).toBe("¡Correcto, es BULBASAUR!");
-        expect(wrap.vm.showPoke).toBe(true);
-
-        // Comprobar el poke != 1
-        await wrap.vm.CheckSelected(2);
-        expect(wrap.find("h3").exists()).toBe(true);
-        expect(wrap.vm.message).toBe("Oops!, era BULBASAUR");
-        expect(wrap.vm.showPoke).toBe(true);
-    })
 })

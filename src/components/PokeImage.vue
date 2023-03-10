@@ -1,7 +1,7 @@
 <template>
 <h2 class="fw-bold">¿Quién es ese Pokemon?</h2>
 <div class="img-container">
-    <img v-if="!isVisible" class="img-show fade-in" :src="imgSrc" alt="Pokemon" height="200">
+    <img v-if="isVisible" class="img-show fade-in" :src="imgSrc" alt="Pokemon" height="200">
     <img v-else class="img-hint" :src="imgSrc" alt="Pokemon" height="200">
 </div>
 </template>

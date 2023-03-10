@@ -23,7 +23,7 @@ describe("PokeImage",() =>
             props:
             {
                 pokeId: 20,
-                isVisible: false,
+                isVisible: true,
             }
         });
 
@@ -50,7 +50,7 @@ describe("PokeImage",() =>
         const img1 = wrapper.find("img");
         expect(img1).toBeTruthy(); // Se muestra 1
         // La img 1 es visible
-        expect(img1.classes()).toContain("img-hint");
+        expect(img1.classes()).toContain("img-show");
     });
 
     test("El source de la imágen debe ser correcto",() =>
